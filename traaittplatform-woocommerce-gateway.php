@@ -1,11 +1,11 @@
 <?php
 /*
-Plugin Name: traaittPlatform Woocommerce Gateway
+Plugin Name: traaittPlatform Gateway for WooCommerce
 Plugin URI:
-Description: Extends WooCommerce by adding a traaittPlatform Gateway
-Version: 3.0.0
+Description: Extends WooCommerce by adding a traaittPlatform Payment Gateway
+Version: 1.0.0
 Tested up to: 4.9.8
-Author: mosu-forge, SerHack
+Author: mosu-forge, SerHack, TRRXITTE inc.
 Author URI: https://monerointegrations.com/
 */
 // This code isn't for Dark Net Markets, please report them to Authority!
@@ -13,10 +13,10 @@ Author URI: https://monerointegrations.com/
 defined( 'ABSPATH' ) || exit;
 
 // Constants, you can edit these if you fork this repo
-define('TRAAITTPLATFORM_GATEWAY_EXPLORER_URL', 'https://explorer.traaittplatform.lol');
-define('TRAAITTPLATFORM_GATEWAY_ATOMIC_UNITS', 2);
+define('TRAAITTPLATFORM_GATEWAY_EXPLORER_URL', 'https://traaittnetwork.com/etrx/simple/');
+define('TRAAITTPLATFORM_GATEWAY_ATOMIC_UNITS', 8);
 define('TRAAITTPLATFORM_GATEWAY_ATOMIC_UNIT_THRESHOLD', 100); // Amount under in atomic units payment is valid
-define('TRAAITTPLATFORM_GATEWAY_DIFFICULTY_TARGET', 30);
+define('TRAAITTPLATFORM_GATEWAY_DIFFICULTY_TARGET', 644);
 
 // Do not edit these constants
 define('TRAAITTPLATFORM_GATEWAY_PLUGIN_DIR', plugin_dir_path(__FILE__));

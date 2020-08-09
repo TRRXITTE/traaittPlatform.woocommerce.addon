@@ -93,7 +93,7 @@ class traaittPlatform_Gateway extends WC_Payment_Gateway
     public function validate_traaittplatform_address_field($key,$address)
     {
 
-        if (strlen($address) == 97 && substr($address, 0, 2) == 'TR')
+        if (strlen($address) == 101 && substr($address, 0, 5) == 'iETRX')
             return $address;
         self::$_errors[] = 'ETRX address is invalid';
 
@@ -136,8 +136,8 @@ class traaittPlatform_Gateway extends WC_Payment_Gateway
         $height = self::$traaittplatform_service->getHeight();
 
         if (!isset($wallet_amount)) {
-            self::$_errors[] = 'Cannot connect to traaittplatform-wallet-rpc';
-            self::$log->add('traaittPlatform_Payments', '[ERROR] Cannot connect to traaittplatform-wallet-rpc');
+            self::$_errors[] = 'Cannot connect to traaittPlatform Service';
+            self::$log->add('traaittPlatform_Payments', '[ERROR] Cannot connect to traaittPlatform Service');
             return array(
                 'height' => 'Not Available',
                 'balance' => 'Not Available',
